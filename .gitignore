@@ -1,0 +1,30 @@
+# Build artifacts
+bin/
+build/
+*.d
+*.o
+*.obj
+*.out
+*.exe
+*.elf
+*.bin
+*.hex
+*.map
+*.lst
+*.sec
+*.sym
+
+# Executable files
+bouncing_balls
+
+# Backup / OS
+*~
+*.swp
+.DS_Store
+Thumbs.db
+
+# Visual Studio / IDE
+.vscode/
+Makefile.user
+*.log
+*.code-workspace
