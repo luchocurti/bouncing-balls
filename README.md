@@ -1,6 +1,8 @@
 # Bouncing Balls — Collision Spawns a New Ball
 
-A small C++20 + SDL2 physics simulation for Ubuntu.
+A small C++20 + SDL2 physics simulation for Linux.
+
+![Bouncing Balls](assets/screenshot.png)
 
 The simulation starts with two balls moving inside a circular boundary. Whenever two balls collide, a new ball is created and placed at a free random position inside the circle. The process continues until there is no longer enough space to place another complete ball.
 
@@ -13,6 +15,8 @@ The simulation starts with two balls moving inside a circular boundary. Whenever
 5. The new ball is placed at a random free position inside the circle.
 6. If there is no available space for another complete ball, the simulation finishes.
 
+![Collision demo](assets/demo.gif)
+
 ## 1. Install Dependencies
 
 The project requires:
@@ -21,7 +25,7 @@ The project requires:
 * SDL2 development libraries
 * `pkg-config`
 
-On Ubuntu 24.04:
+On systems using `apt` (Debian, Ubuntu, and derivatives):
 
 ```bash
 sudo apt update
@@ -32,17 +36,20 @@ sudo apt install build-essential libsdl2-dev pkg-config
 
 ```text
 .
+├── assets/
+│   ├── demo.gif        # Collision demo
+│   └── screenshot.png  # Bouncing Balls preview
 ├── include/
-│   ├── renderer.hpp      # Rendering interface
-│   └── simulation.hpp    # Public simulation data types and class interface
+│   ├── renderer.hpp    # Rendering interface
+│   └── simulation.hpp  # Public simulation data types and class interface
 ├── src/
-│   ├── main.cpp          # Application entry point, CLI, SDL setup, event loop
-│   ├── renderer.cpp      # SDL2 drawing implementation
-│   └── simulation.cpp    # Simulation state, physics, collisions, spawning
-├── .gitignore            # Files and directories excluded from Git
-├── LICENSE               # Project license
-├── Makefile              # Make build configuration
-└── README.md             # Project documentation
+│   ├── main.cpp        # Application entry point, CLI, SDL setup, event loop
+│   ├── renderer.cpp    # SDL2 drawing implementation
+│   └── simulation.cpp  # Simulation state, physics, collisions, spawning
+├── .gitignore          # Files and directories excluded from Git
+├── LICENSE             # Project license
+├── Makefile            # Make build configuration
+└── README.md           # Project documentation
 ```
 
 ### `src/main.cpp`
